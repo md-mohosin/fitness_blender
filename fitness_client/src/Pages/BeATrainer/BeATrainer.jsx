@@ -46,9 +46,8 @@ const BeATrainer = () => {
 
 
     return (
-        <div className="p-4 lg:w-6/12 mx-auto mt-10 mb-10">
-            <Link to='/'><h1 className="text-xl font-bold text-center pb-2 flex items-center"><FaArrowLeft></FaArrowLeft>Back to Home</h1></Link>
-            <div className="bg-base-100 w-full border">
+        <div className="p-4 lg:w-6/12 mx-auto">
+            <div className="bg-base-100 w-full border mt-20">
 
                 <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 

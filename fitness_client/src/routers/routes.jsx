@@ -21,7 +21,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
-    errorElement:<Error></Error>,
+    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
@@ -32,8 +32,12 @@ export const router = createBrowserRouter([
         element: <AllTrainer></AllTrainer>
       },
       {
-        path:"trainerDetails/:id",
-        element:<TrainerDetails></TrainerDetails>
+        path: "trainerDetails/:id",
+        element: <TrainerDetails></TrainerDetails>
+      },
+      {
+        path: "beATrainer",
+        element: <PrivetRoute><BeATrainer></BeATrainer></PrivetRoute>
       }
     ]
   },
@@ -50,8 +54,8 @@ export const router = createBrowserRouter([
         element: <AllNewsLetterSubscriber></AllNewsLetterSubscriber>
       },
       {
-        path:"allTrainers",
-        element:<AllTrainersForAdmin></AllTrainersForAdmin>
+        path: "allTrainers",
+        element: <AllTrainersForAdmin></AllTrainersForAdmin>
       }
     ]
   },
@@ -59,10 +63,7 @@ export const router = createBrowserRouter([
 
 
 
-  {
-    path: "beATrainer",
-    element: <PrivetRoute><BeATrainer></BeATrainer></PrivetRoute>
-  },
+
   {
     path: '/userProflie',
     element: <UserProfile></UserProfile>

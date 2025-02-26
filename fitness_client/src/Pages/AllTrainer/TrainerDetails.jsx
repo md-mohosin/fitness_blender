@@ -17,7 +17,7 @@ const TrainerDetails = () => {
     })
 
     return (
-        <div className="my-20">
+        <div className="flex flex-col justify-center items-center min-h-screen space-y-5">
             <h1 className="text-4xl font-bold text-center">Details of {trainerDetails.name}</h1>
             <div className="w-80 border p-2 space-y-2 rounded-md">
                 <figure>
@@ -27,7 +27,7 @@ const TrainerDetails = () => {
                         alt="Shoes" />
                 </figure>
                 <div className="">
-                    <h2 className="card-title">{trainerDetails.name}</h2>
+                    <h2 className="card-title">Name : {trainerDetails.name}</h2>
                     <h1 className="card-title">Skill : {trainerDetails.skill}</h1>
                     <h1 className="card-title">Age : {trainerDetails.age}</h1>
                     <h1 className="card-title">Day: {trainerDetails.day}</h1>
