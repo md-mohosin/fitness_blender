@@ -14,6 +14,8 @@ import AllTrainersForAdmin from "../Pages/Dashboard/Admin/AllTrainersForAdmin";
 import Error from "../Pages/error/Error";
 import PrivetRoute from "./PrivetRoute";
 import TrainerDetails from "../Pages/AllTrainer/TrainerDetails";
+import AllClass from "../Pages/AallClass/AllClass";
+import Payment from "../Pages/Payment/Payment";
 
 
 
@@ -38,6 +40,14 @@ export const router = createBrowserRouter([
       {
         path: "beATrainer",
         element: <PrivetRoute><BeATrainer></BeATrainer></PrivetRoute>
+      },
+      {
+        path: "allClass",
+        element: <PrivetRoute><AllClass></AllClass></PrivetRoute>
+      },
+      {
+        path:"payment",
+        element:<Payment></Payment>
       }
     ]
   },

@@ -76,7 +76,27 @@ async function run() {
         const userCollection = client.db('last_assignment').collection('users')
         const reviewCollection = client.db('last_assignment').collection('review')
         const trainerCollection = client.db('last_assignment').collection('trainer')
+        const packagesCollection = client.db('last_assignment').collection('subscription')
 
+
+
+        // PACKAGES DATA
+
+        app.post('/packages', async (req, res) => {
+            const data = req.body
+            const result = await packagesCollection.insertOne(data)
+            res.send(result)
+        })
+
+
+
+
+        app.get('/packages', async (req, res) => {
+            const result = packagesCollection.find()
+            const result2 = await result.toArray()
+            console.log(result2);
+            res.send(result2)
+        })
 
 
 
@@ -149,6 +169,9 @@ async function run() {
 
 
 
+
+
+
         // TRAINER DATA
         app.post('/trainer', async (req, res) => {
             const data = req.body
@@ -180,6 +203,14 @@ async function run() {
             const result = await trainerCollection.deleteOne(query)
             res.send(result)
         })
+
+
+
+
+
+
+
+
 
 
 
